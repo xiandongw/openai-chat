@@ -1,0 +1,7 @@
+{
+    "name": "chatgpt-demo",
+    "version": "1.0.0",
+    "dependencies": {
+      "@openai/chat-gpt": "^0.12.1"
+    }
+  }

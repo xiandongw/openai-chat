@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChatGPT Demo</title>
+</head>
+<body>
+<h1>ChatGPT Demo</h1>
+<input type="text" id="input" />
+<button onclick="sendMessage()">Send Message</button>
+<div id="output"></div>
+<script src="https://cdn.jsdelivr.net/npm/@openai/chat-gpt@0.12.1/dist/chat-gpt.min.js"></script>
+<script>
+const chatGPT = new ChatGPT({
+  apiKey: "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"
+});
+
+function sendMessage() {
+  const message = document.getElementById("input").value;
+  chatGPT.generate(message, (response) => {
+    document.getElementById("output").innerHTML = response.text;
+  });
+}
+</script>
+</body>
+</html>
